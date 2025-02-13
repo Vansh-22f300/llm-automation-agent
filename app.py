@@ -164,7 +164,8 @@ def extract_email_sender():
 
 # Task A8: Extract Credit Card Number from Image
 def extract_credit_card():
-    image = Image.open("/data/credit-card.png")
+    
+    image = Image.open("data/credit-card.png")
     extracted_text = pytesseract.image_to_string(image)
     
     match = re.search(r"\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}", extracted_text)
